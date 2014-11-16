@@ -1,7 +1,12 @@
 body {
 
-	padding-top: 100px; 
+	padding-top: 30px; 
 
+}
+
+.nav nav-bar {
+
+	display: inline;
 }
 
 .container-fluid-section {
