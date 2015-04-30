@@ -1,8 +1,7 @@
 //Create the Angular.js Module
-var portfolioApp = angular.module('portfolioApp', ['ngRoute', 'ngResource']);
+var portfolioApp = angular.module('portfolioApp', ['ngRoute', 'ngResource', 'ngCookies']);
 
 //Establish the routes
-
 portfolioApp.config(function ($routeProvider) {
 
 	$routeProvider
@@ -23,7 +22,6 @@ portfolioApp.config(function ($routeProvider) {
 		templateUrl: 'app/partials/resume.htm',
 		controller: 'resumeController'
 	})
-	
 });
 
 //Define the controllers
@@ -38,6 +36,11 @@ portfolioApp.controller('portfolioController', ['$scope', function($scope) {
 	
 }]);
 
-portfolioApp.controller('resumeController', ['$scope', function($scope) {
+portfolioApp.controller('resumeController', ['$scope', '$injector', '$http', 'twitter', function($scope, $injector, $http, twitter) {
+
+
+	$scope.greeting = "Hello";
+	$scope.hello = twitter.sayHello("Bob");
 	
 }]);
+//$http.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=philliptularak&count=2')
