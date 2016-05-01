@@ -7,19 +7,19 @@ portfolioApp.config(function ($routeProvider) {
 	$routeProvider
 	
 	.when('/', {
-		templateUrl: 'app/partials/home.htm',
+		templateUrl: './app/components/home/homeView.html',
 		controller: 'homeController'
 	})
 	.when('/design-process', {
-		templateUrl: 'app/partials/design-process',
+		templateUrl: './app/components/process/processView.html',
 		controller: 'designProcessController'
 	})
 	.when('/portfolio', {
-		templateUrl: 'app/partials/portfolio',
+		templateUrl: './app/components/portfolio/portfolioView.html',
 		controller: 'portfolioController'
 	})
 	.when('/resume', {
-		templateUrl: 'app/partials/resume.htm',
+		templateUrl: './app/components/resume/resumeView.html',
 		controller: 'resumeController'
 	})
 });
@@ -27,11 +27,25 @@ portfolioApp.config(function ($routeProvider) {
 //Define the controllers
 portfolioApp.controller('homeController', ['$scope', function($scope) {
 	
+	$scope.portfolioItems = [
+		
+		{
+			title: "Item 1",
+			description: "This is a description..."
+		},
+		{
+			title: "Item 2",
+			description: "This is a description..."			
+		}
+	]
+	
 }]);
 
 portfolioApp.controller('designProcessController', ['$scope', function($scope) {
 	
 }]);
+
+
 portfolioApp.controller('portfolioController', ['$scope', function($scope) {
 	
 }]);

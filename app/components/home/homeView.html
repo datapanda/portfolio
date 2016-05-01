@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <ul ng-controller="homeController">
+            <li ng-repeat="item in portfolioItems">
+                
+                {{item.title}}
+                {{item.description}}
+                
+            </li>
+        </ul>
+        <h4>Forecast by City</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" />
+        </div>
+        <a href="#/resume" class="btn btn-primary">Get Forecast</a>
+    </div>
+</div>

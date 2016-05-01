@@ -1,103 +1,128 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Phillip Tularak | User Experience Designer</title>
+<html lang="en-us" ng-app="portfolioApp">
+	<head>
+		<title>Phil Tularak | User Experience Designer</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
-	<!-- Custom Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
+		<!-- Custom Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="./app/app.css">
+  	
+		<!-- Adds Angular.js from the Google CDN -->
+		<script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+		<script src="https://code.angularjs.org/1.5.5/angular-resource.min.js"></script>
+		<script src="https://code.angularjs.org/1.5.5/angular-cookies.min.js"></script>
+		<script src="./app/app.js"></script>
 
-	//Scroll feature adapted from http://alijafarian.com/responsive-page-scrolling-with-jquery-and-bootstrap/
-
-		$(document).ready(function() {
-
-			$('.section-scroll').on('click', function(event) {
-
-				event.preventDefault();
-				var sectionID = $(this).attr("data-id");
-				scrollToSection('#' + sectionID, 600);
-				console.log("this is working");
-
-			});
-
-			$('.scroll-top').on('click', function(event) {
-
-				event.preventDefault();
-				$('html, body').animate({scrollTop:0}, 'slow');
-			});
-		});
-		
-		function scrollToSection(id, speed) {
-
-			var offset = 50;
-			var targetOffset = $(id).offset().top - offset; //Grab the sections top position and then offset it with bootstrap navigation offset
-			var home = $('#navbar');
-			$('html, body').animate({scrollTop: targetOffset}, speed);
-
-			if (navbar.hasClass("open")) {
-
-				navbar.css("height", "1px").removeClass("in").addClass("collapse");
-				navbar.removeClass("open");
-			}
-		}
-
-
-
-
-	</script>
-
-</head>
-<body>
-	<div class="container-main">
+	</head>
+	<body>
 		<header>
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<nav class="navbar navbar-default">
 				<div class="container">
 					<div class="navbar-header">
-						<div class="collapse navbar-collapse" id="navbar">
-							<ul class="nav navbar-nav">
-								<li><a href="#about" class="section-scroll" data-id="about">about</a></li>
-								<li><a href="#design-process" class="section-scroll "data-id="design-process">design process</a></li>
-								<li><a href="#work" class="section-scroll" data-id="work">work</a></li>
-								<li><a href="#leadership" class="section-scroll" data-id="leadership">leadership</a></li>								
-							</ul>
-						</div>					
+					   <a class="navbar-brand" href="/portfolio/#/">Phil Tularak | User Experience Designer</a>
 					</div>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="#/design-process"><i class="fa fa-home"></i> Design Process</a></li>
+						<li><a href="#/portfolio"><i class="fa fa-home"></i> Portfolio</a></li>
+						<li><a href="#/resume"><i class="fa fa-home"></i> Resume</a></li>
+					</ul>
 				</div>
 			</nav>
 		</header>
-		<section id="about" class="container-fluid-section">
-			<div class="section-title">
-				<h1>about</h1>	
+		<!--<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12"><h1>Hello, World!</h1></div>	
 			</div>
-		</section>
-		<section id="design-process" class="container-fluid-section">
-			<div class="section-title">
-				<h1>design process</h1>	
+		</div>-->
+		<div class="container">
+			<div ng-view></div>	
+		</div>
+		
+		<!--<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>SourceCheck</h3>
+					<p>Problem: The company needed greater visability into its sourcing spend across its various business units. Source Leaders often spend a significant amount of time pulling data out of source systems and then massaging the data in Excel in order to find the information they needed.</p>
+
+					<p>SourceCheck is a mobile applicaiton that brings data to the 7,000+ supply chain users. It provides the users with supplier information, payment terms, and supplier ratings in an easy to use mobile application.</p>
+
+					<p>The outcome of the application is over $5,000,000 in savings for the Oil & Gas business through greater visability. </p>	
+				</div>
 			</div>
-		</section>
-		<section id="work" class="container-fluid-section">
-			<div class="section-title">
-				<h1>work</h1>	
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Understanding the users</h3>		
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
+				</div>	
+				<div class="col-md-6">
+					<img src="./projects/sourcecheck/img1.jpg" alt="..." class="img-rounded" height="400px">
+				</div>
 			</div>
-		</section>
-		<section id="leadership" class="container-fluid-section">
-			<div class="section-title">
-				<h1>leadership</h1>	
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Mapping user pain points</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>		
+				</div>
+				<div class="col-md-6">
+					<img src="./projects/sourcecheck/img2.jpg" alt="..." class="img-rounded" height="400px">
+				</div>
 			</div>
-		</section>
-	</div>
-	<div class="container-footer">
-		<footer></footer>
-	</div>
-	
-</body>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Sketching out ideas</h3>		
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./projects/sourcecheck/img3.jpg" alt="..." class="img-rounded" height="400px">
+				</div>
+			</div>				
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Mapping the user flow</h3>		
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./projects/sourcecheck/img4.PNG" alt="..." class="img-rounded">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Prototyping in Axure</h3>		
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./projects/sourcecheck/img3.jpg" alt="..." class="img-rounded" height="400px">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Launching to users</h3>		
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./projects/sourcecheck/img6.png" alt="..." class="img-rounded">
+				</div>
+			</div>-->
+	<footer class="footer">
+		<div class="container">
+			<div class="col-md-4">
+				<h2>About</h2>
+					<p>I’m a passionate user experience professional who lives and breathes all things UX. I believe in being an advocate and the last line of defense for users - listening to, talking to, and observing them in order to understand their needs so I can help deliver the best experience possible for them in the products I design.</p>
+			</div>
+			<div class="col-md-6"></div>
+			<p class="text-muted">Place sticky footer content here.</p>
+		</div>
+	</footer>
+	</body>
 </html>
