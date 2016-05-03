@@ -1,37 +1,40 @@
+html {
+	
+	position: relative;
+	min-height: 100%;
+}
 body {
-
-	padding-top: 70px; 
-
+	
+	/* Margin bottom by footer height */
+  	margin-bottom: 200px;
+}
+.footer {
+	
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 200px;
+	background-color: #f5f5f5;
 }
 
-.nav nav-bar {
+.background {
 
-	display: inline;
+	background-image: url(./img/background.jpg);
+	min-height: 500px;
 }
 
-.container-fluid-section {
+.img-rounded {
 
+	background-color: #999;
 	min-height: 400px;
-}
-.section-title {
-
-	background-color: #FF6666;
-	min-height: 70px;
-}
-#about {
-
-	background-color: #D0D0D0;
-
+	min-width: 350px;
 }
 
-#design-process {
-
-	background-color: #E8E8E8;
-
-}
-
-#leadership {
-
-	background-color: #D0D0D0;
-
+.placeholder {
+	
+	background-color: grey;
+	min-height: 150px;
+	min-width: 300px;
+	margin-bottom: 50px;
 }
