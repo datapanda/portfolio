@@ -26,29 +26,37 @@
 	<body>
 		<header>
 			<nav class="navbar navbar-default">
-				<div class="container">
-					<div class="navbar-header">
-					   <a class="navbar-brand" href="/portfolio/#/">Phil Tularak | User Experience Designer</a>
+				<div class="navbar-header">
+					<div class="container">
+						<a class="navbar-brand" href="/">Phil Tularak</a>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+							<li><a href="#/design-process"><i class="fa fa-home"></i> Design Process</a></li>
+							<li><a href="#/portfolio"><i class="fa fa-home"></i> Portfolio</a></li>
+							<li><a href="#/resume"><i class="fa fa-home"></i> Resume</a></li>
+						</ul>
 					</div>
-
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-						<li><a href="#/design-process"><i class="fa fa-home"></i> Design Process</a></li>
-						<li><a href="#/portfolio"><i class="fa fa-home"></i> Portfolio</a></li>
-						<li><a href="#/resume"><i class="fa fa-home"></i> Resume</a></li>
-					</ul>
 				</div>
 			</nav>
 		</header>
-		<!--<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12"><h1>Hello, World!</h1></div>	
-			</div>
-		</div>-->
 		<div class="container">
 			<div ng-view></div>	
-		</div>
-		
+		</div>	
+		<footer class="footer">
+			<div class="container">
+				<div class="col-md-4">
+					<h2>About</h2>
+						<p>
+							I’m a passionate user experience professional who lives and breathes all things UX. I believe in being an advocate and the last line of defense for users - listening to, talking to, and observing them in order to understand their needs so I can help deliver the best experience possible for them in the products I design.
+						</p>	
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"></div>
+			</div>
+		</footer>
+	</body>
+</html>
+
 		<!--<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -114,15 +122,12 @@
 					<img src="./projects/sourcecheck/img6.png" alt="..." class="img-rounded">
 				</div>
 			</div>-->
-	<footer class="footer">
-		<div class="container">
-			<div class="col-md-4">
-				<h2>About</h2>
-					<p>I’m a passionate user experience professional who lives and breathes all things UX. I believe in being an advocate and the last line of defense for users - listening to, talking to, and observing them in order to understand their needs so I can help deliver the best experience possible for them in the products I design.</p>
+		<!--<footer class="footer">
+			<div class="container">
+				<div class="col-md-4">
+					<h2>About</h2>
+						<p>I’m a passionate user experience professional who lives and breathes all things UX. I believe in being an advocate and the last line of defense for users - listening to, talking to, and observing them in order to understand their needs so I can help deliver the best experience possible for them in the products I design.</p>
+				</div>
+				<div class="col-md-6"></div>
 			</div>
-			<div class="col-md-6"></div>
-			<p class="text-muted">Place sticky footer content here.</p>
-		</div>
-	</footer>
-	</body>
-</html>
+		</footer>-->
