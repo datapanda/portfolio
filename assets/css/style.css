@@ -38,3 +38,20 @@ body {
 	min-width: 300px;
 	margin-bottom: 50px;
 }
+
+#navbar-main.affix-top {
+	
+	position: fixed;
+    top: 60;
+    width: 100%;
+    z-index: -10;	
+	
+}
+
+#navbar-main.affix {
+	
+	top: 0;
+  	left: 0;
+  	right: 0;
+	  
+}

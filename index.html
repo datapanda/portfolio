@@ -20,12 +20,20 @@
 		<script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
 		<script src="https://code.angularjs.org/1.5.5/angular-resource.min.js"></script>
 		<script src="https://code.angularjs.org/1.5.5/angular-cookies.min.js"></script>
+		<script src="https://cdnjs.com/libraries/angular-ui-router"></script>
 		<script src="./app/app.js"></script>
+		<script src="./assets/js/run.js"></script>
+		
+		<!-- Adds jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-default">
+			<nav id="navbar-main" class="navbar navbar-default">
+			<!--<nav id="navbar-main" class="navbar navbar-default" data-spy="affix" data-offset-top="60">-->
 				<div class="navbar-header">
 					<div class="container">
 						<a class="navbar-brand" href="/">Phil Tularak</a>
@@ -56,78 +64,3 @@
 		</footer>
 	</body>
 </html>
-
-		<!--<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h3>SourceCheck</h3>
-					<p>Problem: The company needed greater visability into its sourcing spend across its various business units. Source Leaders often spend a significant amount of time pulling data out of source systems and then massaging the data in Excel in order to find the information they needed.</p>
-
-					<p>SourceCheck is a mobile applicaiton that brings data to the 7,000+ supply chain users. It provides the users with supplier information, payment terms, and supplier ratings in an easy to use mobile application.</p>
-
-					<p>The outcome of the application is over $5,000,000 in savings for the Oil & Gas business through greater visability. </p>	
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h3>Understanding the users</h3>		
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
-				</div>	
-				<div class="col-md-6">
-					<img src="./projects/sourcecheck/img1.jpg" alt="..." class="img-rounded" height="400px">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h3>Mapping user pain points</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>		
-				</div>
-				<div class="col-md-6">
-					<img src="./projects/sourcecheck/img2.jpg" alt="..." class="img-rounded" height="400px">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h3>Sketching out ideas</h3>		
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
-				</div>
-				<div class="col-md-6">
-					<img src="./projects/sourcecheck/img3.jpg" alt="..." class="img-rounded" height="400px">
-				</div>
-			</div>				
-			<div class="row">
-				<div class="col-md-6">
-					<h3>Mapping the user flow</h3>		
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
-				</div>
-				<div class="col-md-6">
-					<img src="./projects/sourcecheck/img4.PNG" alt="..." class="img-rounded">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h3>Prototyping in Axure</h3>		
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
-				</div>
-				<div class="col-md-6">
-					<img src="./projects/sourcecheck/img3.jpg" alt="..." class="img-rounded" height="400px">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h3>Launching to users</h3>		
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac tortor id eros aliquet dignissim id sit amet tellus. Praesent fermentum libero at mauris ornare, ac lacinia neque ultrices. Phasellus egestas massa nisl, maximus efficitur ligula commodo quis. Vivamus fermentum, metus sit amet placerat fermentum, tellus ipsum porta ipsum, eu posuere erat tortor at tellus. Curabitur in tincidunt purus. Nulla ut consequat magna, nec dictum lectus. Donec tincidunt mollis ex, id luctus risus ultrices vel. Proin eu fringilla magna. In est massa, sodales eget lectus a, consectetur fermentum ante. Nam ut sollicitudin sem. Quisque enim risus, ultrices id sagittis id, pulvinar ut neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ligula quam, eleifend at facilisis vitae, facilisis id mauris. Sed fermentum elementum felis, ut pulvinar nisi congue et. Fusce ullamcorper quis quam sed bibendum.</p>
-				</div>
-				<div class="col-md-6">
-					<img src="./projects/sourcecheck/img6.png" alt="..." class="img-rounded">
-				</div>
-			</div>-->
-		<!--<footer class="footer">
-			<div class="container">
-				<div class="col-md-4">
-					<h2>About</h2>
-						<p>I’m a passionate user experience professional who lives and breathes all things UX. I believe in being an advocate and the last line of defense for users - listening to, talking to, and observing them in order to understand their needs so I can help deliver the best experience possible for them in the products I design.</p>
-				</div>
-				<div class="col-md-6"></div>
-			</div>
-		</footer>-->
