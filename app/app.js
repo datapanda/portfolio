@@ -33,7 +33,10 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 .controller('homeController', ['$scope', 'test', function($scope, TestFactory) {
 	
 	$scope.stuff = TestFactory;
-	console.log($scope.stuff.bob);
+	console.log(TestFactory.hello());
+	// console.log($scope.stuff.hello);
+	// console.log($scope.stuff.goodbye);
+	// console.log($scope.stuff.bob);
 	$scope.portfolioItems = [
 		
 		{
