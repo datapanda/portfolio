@@ -2,7 +2,7 @@ function () {
     'use strict';
  
     angular
-        .module('app')
+        .module('portfolioApp')
         .factory('UserService', UserService);
  
     UserService.$inject = ['$timeout', '$filter', '$q'];

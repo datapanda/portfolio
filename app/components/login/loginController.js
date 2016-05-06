@@ -2,7 +2,7 @@ function () {
     'use strict';
  
     angular
-        .module('app')
+        .module('portfolioApp')
         .controller('LoginController', LoginController);
  
     LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];

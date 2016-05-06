@@ -30,8 +30,10 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 })
 
 //Define the controllers
-.controller('homeController', ['$scope', function($scope) {
+.controller('homeController', ['$scope', 'test', function($scope, TestFactory) {
 	
+	$scope.stuff = TestFactory;
+	console.log($scope.stuff.bob);
 	$scope.portfolioItems = [
 		
 		{
