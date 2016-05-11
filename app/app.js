@@ -16,8 +16,22 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 			templateUrl: './app/components/process/processView.html'
 		})
 		.state('portfolio', {
-			url: '/portfolio',
-			templateUrl: './app/components/portfolio/portfolioView.html'
+			url: '/portfolio/{portfolioID}',
+			templateUrl: './app/components/portfolio/portfolioView.html',
+			controller: function($scope, $state, $stateParams, $http) {
+				
+				$http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
+					
+					$scope.portfolio = data;
+					console.log(data);
+				
+				});
+				var foo = $stateParams.portfolioID; //getting fooVal
+				console.log(foo);
+				//$scope.id = $stateParams.portfolioID
+			}
+			
+			// http://stackoverflow.com/questions/27338954/building-a-portfolio-use-ng-repeat-but-each-item-has-own-page
 		})
 		.state('resume', {
 			url: '/resume',

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "SourceCheck",
+        "client": "GE Digital",
+        "description": "It was a sourcing application",
+        "skills": ["Interaction Design", "User Research"],
+        "homePage": true
+    },
+    {
+        "id": 2,
+        "name": "Wildlife Strikes",
+        "client": "2013 ExpoSItion",
+        "description": "It was a sourcing application",
+        "skills": ["Interaction Design", "Front-End Development"],
+        "homePage": true
+    }
+]
