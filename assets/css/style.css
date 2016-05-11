@@ -5,6 +5,7 @@ html {
 }
 body {
 	
+	padding-top: 60px;
 	/* Margin bottom by footer height */
   	margin-bottom: 200px;
 }
@@ -54,4 +55,14 @@ body {
   	left: 0;
   	right: 0;
 	  
+}
+p.about {
+	
+	font-size: 1em;
+	
+}
+.design-process {
+	
+	min-height: 300px;
+	
 }
