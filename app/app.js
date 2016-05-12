@@ -9,30 +9,23 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 	$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: './app/components/home/homeView.html'	
+			templateUrl: './app/components/home/homeView.html',
+			controller: 'homeController'	
 		})
 		.state('design-process', {
 			url: '/design-process',
 			templateUrl: './app/components/process/processView.html'
 		})
 		.state('portfolio', {
-			url: '/portfolio/{portfolioID}',
+			url: '/portfolio',
 			templateUrl: './app/components/portfolio/portfolioView.html',
-			controller: function($scope, $state, $stateParams, $http) {
-				
-				$http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
-					
-					$scope.portfolio = data;
-					console.log(data);
-				
-				});
-				var foo = $stateParams.portfolioID; //getting fooVal
-				console.log(foo);
-				//$scope.id = $stateParams.portfolioID
-			}
-			
-			// http://stackoverflow.com/questions/27338954/building-a-portfolio-use-ng-repeat-but-each-item-has-own-page
+			controller: 'portfolioController'
 		})
+		.state('portfolioItem', {
+			url: '/portfolio/{portfolioName}',
+			templateUrl: './app/components/portfolio/portfolioItemView.html',
+			controller: 'portfolioItemController',
+		})		
 		.state('resume', {
 			url: '/resume',
 			templateUrl: './app/components/resume/resumeView.html'
@@ -44,24 +37,42 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 })
 
 //Define the controllers
-.controller('homeController', ['$scope', 'test', function($scope, TestFactory) {
+.controller('homeController', ['$scope', 'test', '$http', function($scope, TestFactory, $http) {
 	
-	$scope.stuff = TestFactory;
-	console.log(TestFactory.hello());
+	$http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
+		
+		var homePageItems = [];
+		
+		angular.forEach(data, function(value, key) {
+			
+			if(value.homePage === true) {
+				
+				homePageItems.push(value);
+			}
+		});
+		
+		$scope.portfolio = homePageItems;
+		console.log(homePageItems);
+				
+	});
+
+	
+	// $scope.stuff = TestFactory;
+	// console.log(TestFactory.hello());
 	// console.log($scope.stuff.hello);
 	// console.log($scope.stuff.goodbye);
 	// console.log($scope.stuff.bob);
-	$scope.portfolioItems = [
+	// $scope.portfolioItems = [
 		
-		{
-			title: "Item 1",
-			description: "This is a description..."
-		},
-		{
-			title: "Item 2",
-			description: "This is a description..."			
-		}
-	]
+	// 	{
+	// 		title: "Item 1",
+	// 		description: "This is a description..."
+	// 	},
+	// 	{
+	// 		title: "Item 2",
+	// 		description: "This is a description..."			
+	// 	}
+	// ]
 	
 }])
 
@@ -70,10 +81,34 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 }])
 
 
-.controller('portfolioController', ['$scope', function($scope) {
+.controller('portfolioController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
 	
+	$http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
+		
+		$scope.portfolio = data;
+		
+	});
 }])
+.controller('portfolioItemController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
+	
+	$http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
+		
+		var portfolioItems = [];
+		// console.log(portfolioName);
+		angular.forEach(data, function(value, key) {
+			
+			if(value.name === $stateParams.portfolioName) {
 
+				portfolioItems.push(value);
+				
+			}
+		});
+		
+		$scope.portfolio = portfolioItems;
+		console.log("We should be getting back a single item here");
+		console.log($scope.portfolio);
+	});
+}])
 .controller('resumeController', ['$scope', '$injector', '$http', function($scope, $injector, $http) {
 
 	$scope.greeting = "Hello";

@@ -14,5 +14,21 @@
         "description": "It was a sourcing application",
         "skills": ["Interaction Design", "Front-End Development"],
         "homePage": true
+    },
+    {
+        "id": 3,
+        "name": "Connected Cities Design Jam",
+        "client": "GE Digital",
+        "description": "Design exercise with graduate students",
+        "skills": ["Facilitation", "Design Thinking"],
+        "homePage": true
+    },
+    {
+        "id": 4,
+        "name": "Wildlife Strikes",
+        "client": "2013 ExpoSItion",
+        "description": "It was a sourcing application",
+        "skills": ["Interaction Design", "Front-End Development"],
+        "homePage": false
     }
 ]

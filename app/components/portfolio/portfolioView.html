@@ -1,9 +1,9 @@
 <div class="row" ng-controller="portfolioController">
     <div class="container">
-        <div class="col-md-4" ng-repeat="item in portfolio">
+        <div class="col-md-3" ng-repeat="item in portfolio">
             <h1>{{item.name}}</h1>
+            {{item.description}}
+            {{item.client}}
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
     </div>
 </div>

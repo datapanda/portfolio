@@ -17,21 +17,21 @@
         
     </div>
 </div>
-<div class="row">
+<div class="row" ng-controller="homeController">
     <div class="container design-process">
         <h1>Selected Work</h1>
-        <div class="col-md-4">
+        <div class="col-md-4" ng-repeat="item in portfolio">
             <div class="portfolio-item">
-                <a ui-sref="portfolio({ portfolioID: 'sourcecheck' })"
+                <a ui-sref="portfolioItem({ portfolioName: item.name })">
                     <img src="holder.js/350x250?bg=2a2025">
-                    <h4>GE Digital - SourceCheck</h4>
+                    <h4>{{item.name}}</h4>
                 </a>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.
                 </p>                
             </div>
         </div>
-        <div class="col-md-4">
+        <!--<div class="col-md-4">
             <div class="portfolio-item">
                 <img src="holder.js/350x250?bg=2a2025">
                 <h4>Wildlife Strikes</h4>
@@ -48,7 +48,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.
                 </p>                
             </div>            
-        </div>    
+        </div>    -->
     </div>
 </div>
 

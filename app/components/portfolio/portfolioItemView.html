@@ -1,0 +1,10 @@
+<div class="row" ng-controller="portfolioItemController">
+    <div class="container">
+        <div class="col-md-4" ng-repeat="item in portfolio">
+            <h1>This is a single item in the portfolio</h1>
+            <h1>{{item.name}}</h1>
+            {{item.description}}
+            {{item.client}}
+        </div>
+    </div>
+</div>
