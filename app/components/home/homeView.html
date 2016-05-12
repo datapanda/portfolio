@@ -1,7 +1,7 @@
 <div class="jumbotron">
     <div class="container">
         <div class="col-md-4">
-            <img src="holder.js/350x250?bg=2a2025">    
+            <img src="http://placehold.it/350x250">
         </div>
         <div class="col-md-8">
             <p class="about">
@@ -23,11 +23,11 @@
         <div class="col-md-4" ng-repeat="item in portfolio">
             <div class="portfolio-item">
                 <a ui-sref="portfolioItem({ portfolioName: item.name })">
-                    <img src="holder.js/350x250?bg=2a2025">
+                    <img src="http://placehold.it/350x250">
                     <h4>{{item.name}}</h4>
                 </a>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.
+                    {{item.description}}
                 </p>                
             </div>
         </div>

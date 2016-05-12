@@ -3,7 +3,9 @@
         "id": 1,
         "name": "SourceCheck",
         "client": "GE Digital",
-        "description": "It was a sourcing application",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",
+        "overview": "SourceCheck is a mobile application designed to enable GE's sourcing community to have complete insight into suppliers, parts, and purchase orders enabling savings across GE's multiple businesses. The application was designed, developed and launched within 3 months, using a user-centered design process and iterative development approach. To date the application has been deployed to 7,000 users across GE’s various businesses such as Oil & Gas, Power, and Renewable Energy leading to $5,000,000 in savings for the company. The application provides users with data at their finger when negotiating with suppliers, allowing them better visibility into GE’s global sourcing operations.",
+        "problem": "GE is a Fortune 10 company spanning vast industries such as Aviation, Oil & Gas, Power, Renewable Energy, and Healthcare to name a few. The company operates in over 150 countries with many different sub-businesses. The size and scale of GE creates a problem of visibility for the sourcing community. Different businesses pay different prices for the same parts or have different payment terms depending on the business working with a supplier. This disconnected nature prevents sourcing leaders from fully leveraging the scale and spend of GE. In the end, this prevents them from negotiating the best rate with a supplier depending on the size of their individual business.",
         "skills": ["Interaction Design", "User Research"],
         "homePage": true
     },
@@ -11,6 +13,9 @@
         "id": 2,
         "name": "Wildlife Strikes",
         "client": "2013 ExpoSItion",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",
+        "overview": "Wildlife Strikes is a project that exams Federal Aviation Administration data from data.gov (http://catalog.data.gov/dataset/aircraft-wildlife-strike-data-raw-data-382d6) over a 13 year period (1999 to 2012). The project was part of a course at the University of Michigan School of Information - SI649: Information Visualization. In our scenarios we imagined potential environmentalists or aircraft enthusiast using the data to better understand where bird strikes occur. Our team wanted to map the data into an experience users could play with and really explore the data in a user-friendly manner.",
+        "problem": "",
         "description": "It was a sourcing application",
         "skills": ["Interaction Design", "Front-End Development"],
         "homePage": true
@@ -19,16 +24,33 @@
         "id": 3,
         "name": "Connected Cities Design Jam",
         "client": "GE Digital",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",     
+        "overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",
+        "problem": "",
         "description": "Design exercise with graduate students",
         "skills": ["Facilitation", "Design Thinking"],
         "homePage": true
     },
     {
         "id": 4,
-        "name": "Wildlife Strikes",
-        "client": "2013 ExpoSItion",
+        "name": "Cengage - MindTap",
+        "client": "Cengage",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",   
+        "overview": "The Cengage - MindTap project was part of a three month evaluation of the product as part of a graduate course at the University of Michigan School of Information. The course was called SI622 - Needs Assessment and Usability Evaluation. Our team was tasked with examining the MindTap product doing an exhaustive set of research on the project.",
+        "problem": "",
         "description": "It was a sourcing application",
         "skills": ["Interaction Design", "Front-End Development"],
         "homePage": false
-    }
+    },
+    {
+        "id": 5,
+        "name": "Huron River Watershed Council",
+        "client": "Huron River Watershed Council",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",   
+        "overview": "The Cengage - MindTap project was part of a three month evaluation of the product as part of a graduate course at the University of Michigan School of Information. The course was called SI622 - Needs Assessment and Usability Evaluation. Our team was tasked with examining the MindTap product doing an exhaustive set of research on the project.",
+        "problem": "",
+        "description": "It was a sourcing application",
+        "skills": ["Interaction Design", "Front-End Development"],
+        "homePage": false
+    }    
 ]

@@ -1,9 +1,15 @@
 <div class="row" ng-controller="portfolioController">
     <div class="container">
-        <div class="col-md-3" ng-repeat="item in portfolio">
-            <h1>{{item.name}}</h1>
-            {{item.description}}
-            {{item.client}}
+        <div class="col-md-4" ng-repeat="item in portfolio">
+            <div class="portfolio-item">
+                <a ui-sref="portfolioItem({ portfolioName: item.name })">
+                    <img src="http://placehold.it/350x250">
+                    <h4>{{item.name}}</h4>
+                </a>
+                <p>
+                    {{item.overview}}
+                </p>                
+            </div>    
         </div>
     </div>
 </div>
