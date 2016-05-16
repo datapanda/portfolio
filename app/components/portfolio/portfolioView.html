@@ -1,4 +1,4 @@
-<div class="row" ng-controller="portfolioController">
+<!--<div class="row" ng-controller="portfolioController">
     <div class="container">
         <div class="col-md-4" ng-repeat="item in portfolio">
             <div class="portfolio-item">
@@ -12,4 +12,27 @@
             </div>    
         </div>
     </div>
+</div>-->
+
+
+<div ng-repeat="row in rows" ng-controller="portfolioController">
+    <div class="row">
+        <div class="container">
+            <div ng-class="{'col-xs-4': columns == 3, 'col-xs-3': columns == 4}" ng-repeat="portfolio in row">
+            <!--<div class="col-md-4" ng-repeat="item in portfolio">-->
+                <div class="portfolio-item">
+                    <a ui-sref="portfolioItem({ portfolioName: item.name })">
+                        <img src="http://placehold.it/350x250">
+                        <h4>{{item.name}}</h4>
+                    </a>
+                    <p>
+                        {{item.overview}}
+                    </p>                
+                </div>    
+            </div>
+        </div>
+    </div>
 </div>
+    <!--<div ng-repeat="row in rows">
+      <div class="row">
+        <div ng-class="{'col-xs-4': columns == 3, 'col-xs-3': columns == 4}" ng-repeat="contest in row">-->

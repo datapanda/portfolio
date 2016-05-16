@@ -52,7 +52,7 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 		});
 		
 		$scope.portfolio = homePageItems;
-		console.log(homePageItems);
+		//console.log(homePageItems);
 				
 	});
 
@@ -81,13 +81,67 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 }])
 
 
-.controller('portfolioController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
+.controller('portfolioController', ['$scope', '$http', '$stateParams', 'logger', 'portfolioService', function($scope, $http, $stateParams, logger, portfolioService) {
 	
-	$http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
+	var vm = this;
+	vm.stuff = [];
+	//$scope.stuff = [];
+	//console.log(portfolioService.getPortfolioData());
+	test()
+	
+	//activate();
+
+    // function activate() {
+    //     return test().then(function() {
+    //         //logger.info('Activated Avengers View');
+    //     });
+    // }
+	
+	function test() {
+		return portfolioService.getPortfolioData()
+			.then(function(data) {
+				//console.log(data);
+				vm.stuff = data;
+				//$scope.stuff = data;
+				return vm.stuff;
+			});
+	}
+	
+	console.log("here is the test");
+	console.log(vm.stuff);
+	console.log(vm);
+	//console.log($scope.stuff);
+	// $scope.columns = 3;
+	// var portfolio;
+	
+	// $http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
 		
-		$scope.portfolio = data;
+	// 	// $scope.portfolio = data;
+	// 	// console.log("this is in the portfolio");
+	// 	console.log(data);
+	// 	portfolio = data;
 		
-	});
+	// 	return portfolio;
+		
+	// })
+	
+	// console.log(portfolio);
+	// $scope.getRows = function(array, columns){
+		
+	// 	var i,j,temparray, chunk = columns;
+	// 	for (i=0,j=array.length; i<j; i+=chunk) {
+	// 		temparray = array.slice(i, i+chunk);
+	// 		rows.push(temparray);
+	// 	}
+		
+	// 	return rows;
+	// }
+	
+	// console.log(portfolio);
+	// console.log("here is the error");
+	// console.log($scope.portfolio);
+	// $scope.rows = $scope.getRows($scope.portfolio, $scope.columns);
+
 }])
 .controller('portfolioItemController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
 	
