@@ -22,11 +22,14 @@
                 .catch(getPortfolioDataFail);
                 
             function getPortfolioDataComplete(response) {
-                
-                //return response;
-                //console.log(response)
+                // console.log("testing in the service");
+                // console.log(response)
                 //return response.data.results;
+                
+                //  console.log("testing in the service");
+                //  console.log(response.data)
                 return response.data;
+                //sub optimal 
 
             }
             

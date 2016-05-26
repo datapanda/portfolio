@@ -7,7 +7,14 @@
 
     function logger() {
         
-        return { };
+        return { 
+            
+            "info": function(message) {
+                
+                console.log(message);
+            }
+            
+        };
         
     }
 })();

@@ -83,64 +83,33 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 
 .controller('portfolioController', ['$scope', '$http', '$stateParams', 'logger', 'portfolioService', function($scope, $http, $stateParams, logger, portfolioService) {
 	
-	var vm = this;
-	vm.stuff = [];
-	//$scope.stuff = [];
-	//console.log(portfolioService.getPortfolioData());
-	test()
+	// Use this to filter the rows
+	//http://plnkr.co/edit/yt2YMrabhTMd5BnnXfes?p=preview
+	//http://andyshora.com/promises-angularjs-explained-as-cartoon.html
 	
-	//activate();
+    var vm = this;
+    vm.items = [];
+	
+    activate();
+	
+    function activate() {
+        return getData().then(function() {
+            logger.info('Activate the portfolio view');
+			
+        });
+    }
 
-    // function activate() {
-    //     return test().then(function() {
-    //         //logger.info('Activated Avengers View');
-    //     });
-    // }
+    function getData() {
+        return portfolioService.getPortfolioData()
+            .then(function(data) {
+				vm.items = data;
+				return vm.items;
+            });
+    }	
 	
-	function test() {
-		return portfolioService.getPortfolioData()
-			.then(function(data) {
-				//console.log(data);
-				vm.stuff = data;
-				//$scope.stuff = data;
-				return vm.stuff;
-			});
-	}
-	
-	console.log("here is the test");
-	console.log(vm.stuff);
-	console.log(vm);
-	//console.log($scope.stuff);
-	// $scope.columns = 3;
-	// var portfolio;
-	
-	// $http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
-		
-	// 	// $scope.portfolio = data;
-	// 	// console.log("this is in the portfolio");
-	// 	console.log(data);
-	// 	portfolio = data;
-		
-	// 	return portfolio;
-		
-	// })
-	
-	// console.log(portfolio);
-	// $scope.getRows = function(array, columns){
-		
-	// 	var i,j,temparray, chunk = columns;
-	// 	for (i=0,j=array.length; i<j; i+=chunk) {
-	// 		temparray = array.slice(i, i+chunk);
-	// 		rows.push(temparray);
-	// 	}
-		
-	// 	return rows;
-	// }
-	
-	// console.log(portfolio);
-	// console.log("here is the error");
-	// console.log($scope.portfolio);
-	// $scope.rows = $scope.getRows($scope.portfolio, $scope.columns);
+	console.log("test")
+	console.log(vm.items);
+	console.log("test")
 
 }])
 .controller('portfolioItemController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
