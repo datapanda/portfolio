@@ -133,18 +133,19 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 	
 	$http.get('./assets/portfolio/portfolioItems.json').success(function(data) {
 		
-		var portfolioItems = [];
+		//var portfolioItems = [];
 		// console.log(portfolioName);
 		angular.forEach(data, function(value, key) {
 			
 			if(value.name === $stateParams.portfolioName) {
-
-				portfolioItems.push(value);
+				
+				$scope.portfolio = value;
+				//portfolioItems.push(value);
 				
 			}
 		});
 		
-		$scope.portfolio = portfolioItems;
+		//$scope.portfolio = portfolioItems;
 		console.log("We should be getting back a single item here");
 		console.log($scope.portfolio);
 	});

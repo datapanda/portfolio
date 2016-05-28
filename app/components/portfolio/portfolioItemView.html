@@ -1,28 +1,27 @@
-<div class="container">
-    <div class="row" ng-controller="portfolioItemController">
-        <div class="col-md-4" ng-repeat="item in portfolio">
-            <img src="http://placehold.it/350x250">
+<div class="container" ng-controller="portfolioItemController">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{portfolio.coverImage.location}}" class="cover-image">
         </div>
         <div class="col-md-8">
-            <h1>{{item.name}}</h1>
-            <p>{{item.description}}</p>
-            {{item.coverImage.location}}
+            <h1>{{portfolio.name}}</h1>
+            <p>{{portfolio.description}}</p>
         </div>
     </div>
-        <div class="row">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Overview</h4>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo mi, congue a tempus sed, mattis sed libero. Integer dignissim ante at elit sollicitudin, a lacinia sapien congue. Sed laoreet nulla ac sapien aliquam efficitur. Nulla ut erat eu quam ullamcorper iaculis. Proin in ligula lectus. Sed finibus auctor lectus quis feugiat. Aenean sed commodo sapien. Vestibulum id sagittis lectus. Nunc efficitur ex massa, nec fringilla arcu venenatis vitae. Proin eu lectus eu quam tincidunt dictum.
-
-                Nunc eu leo eget turpis luctus posuere in et justo. Fusce finibus metus quis nisl porta congue. Nunc vitae odio tincidunt, luctus mauris at, egestas risus. Cras et sollicitudin odio, sed porttitor sapien. Quisque magna nisi, consequat vitae risus sit amet, viverra dignissim quam. Praesent suscipit viverra malesuada. Vestibulum ullamcorper auctor ex. Cras at vehicula dui, et pretium nulla. In finibus metus in convallis vulputate. Ut feugiat erat sed gravida pulvinar. Nulla aliquet ante ut quam auctor tempus. Curabitur facilisis elit et tincidunt eleifend. Duis dictum nibh in urna molestie, eu rhoncus est scelerisque.
-
-                Proin egestas tortor ut mauris blandit molestie. Fusce accumsan lorem a volutpat tristique. Morbi nec urna lobortis, eleifend sem id, posuere magna. Aliquam eget nisi et ipsum malesuada molestie eu nec neque. Sed sollicitudin tincidunt mauris commodo tincidunt. Quisque blandit mauris dui, eget egestas eros rhoncus non. Mauris sed erat eu est fermentum semper at eu ex. Donec varius mauris nec scelerisque pharetra. Integer ac urna fermentum, dignissim ligula id, venenatis quam. Nam mollis tellus at ultricies sodales. Quisque vitae risus velit. Praesent faucibus ex eget quam porta, vitae rutrum odio faucibus. Morbi libero arcu, blandit non pellentesque sit amet, condimentum in lectus. Sed sodales tortor tellus, at iaculis dolor aliquam id. Aenean egestas nec felis nec maximus. Quisque pretium mi risus, id imperdiet tellus dictum id.
-
-                Praesent sit amet quam justo. Fusce id erat risus. Mauris in tellus mattis, rutrum tellus nec, imperdiet odio. Duis purus nunc, pulvinar eget finibus molestie, gravida ut nisl. Sed malesuada euismod sagittis. Phasellus ut massa ornare, lobortis nulla et, imperdiet eros. Sed id velit a mi pulvinar hendrerit in vel elit. Aliquam pretium rhoncus nunc, id vulputate mauris vehicula eu. Aliquam convallis ligula magna, ac tempus nisl lobortis at. Aenean eu augue quis neque dignissim convallis.
-
-                Etiam metus eros, cursus quis convallis eget, feugiat dignissim libero. Nulla facilisi. Curabitur volutpat tortor ac leo pellentesque laoreet. Nunc egestas lectus vel velit pulvinar efficitur. Fusce a orci finibus, condimentum mauris et, porta purus. Aenean sed placerat lorem. Nulla vitae est ac dolor ornare egestas. Nullam nec scelerisque arcu. Aliquam erat volutpat.
-
-
-            </p>            
-        </div>
+                {{portfolio.overview}}
+            </p>
+        </div>            
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Problem</h4>
+            <p>
+                {{portfolio.problem}}
+            </p>
+        </div>            
     </div>
 </div>
