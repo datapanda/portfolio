@@ -74,8 +74,14 @@ p.copyright {
 	min-height: 300px;
 	
 }
+.cover-image {
+	
+	height: 250px;
+	width: 350px
+	
+}
 /* Styles go here */
-[class*=' col-'] {
+/*[class*=' col-'] {
   text-align:center;
   border: 1px solid black;
-}
+}*/

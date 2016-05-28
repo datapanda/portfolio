@@ -12,13 +12,21 @@
 </div>-->
 <!--http://stackoverflow.com/questions/27211799/angular-ng-repeat-add-bootstrap-row-every-3-or-4-cols-->
 <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Portfolio Items</h2>
+        </div>
+    </div>
     <div ng-repeat="item in items" ng-if="$index % 3 == 0" class="row">
         <!--Spit the items from the array into a new row-->
         <!--<div class="clearfix" ng-if="$index % 3 == 0"></div>-->
         <div class="col-md-4" ng-repeat="item in items.slice($index, ($index+3 > items.length ? items.length : $index+3))">
             <div class="portfolio-item">
-                <a ui-sref="portfolioItem({ item: item.name })">{{item.name}}</a>
-                    <img src="http://placehold.it/350x250">
+                <a ui-sref="portfolioItem({ portfolioName: item.name })">
+                    <!--<img src="http://placehold.it/350x250">-->
+                    <img src={{item.coverImage.location}} class="cover-image">
+                    <h4>{{item.name}}</h4>
+                </a>
                     <p>{{item.description}}</p>
             </div>
         </div>

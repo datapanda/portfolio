@@ -4,6 +4,21 @@
         "name": "SourceCheck",
         "client": "GE Digital",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",
+        "coverImage": {
+            
+            "name": "SourceCheck",
+            "location": "./assets/portfolio/images/sourceCheck_1.png",
+            "type": "png"
+            
+        },
+        "images": [
+            
+            {
+                "name": "SourceCheck",
+                "location": "./assets/portfolio/images/sourceCheck_1.png",
+                "type": "png"    
+            }
+        ],        
         "overview": "SourceCheck is a mobile application designed to enable GE's sourcing community to have complete insight into suppliers, parts, and purchase orders enabling savings across GE's multiple businesses. The application was designed, developed and launched within 3 months, using a user-centered design process and iterative development approach. To date the application has been deployed to 7,000 users across GE’s various businesses such as Oil & Gas, Power, and Renewable Energy leading to $5,000,000 in savings for the company. The application provides users with data at their finger when negotiating with suppliers, allowing them better visibility into GE’s global sourcing operations.",
         "problem": "GE is a Fortune 10 company spanning vast industries such as Aviation, Oil & Gas, Power, Renewable Energy, and Healthcare to name a few. The company operates in over 150 countries with many different sub-businesses. The size and scale of GE creates a problem of visibility for the sourcing community. Different businesses pay different prices for the same parts or have different payment terms depending on the business working with a supplier. This disconnected nature prevents sourcing leaders from fully leveraging the scale and spend of GE. In the end, this prevents them from negotiating the best rate with a supplier depending on the size of their individual business.",
         "skills": ["Interaction Design", "User Research"],
@@ -17,6 +32,21 @@
         "overview": "Wildlife Strikes is a project that exams Federal Aviation Administration data from data.gov (http://catalog.data.gov/dataset/aircraft-wildlife-strike-data-raw-data-382d6) over a 13 year period (1999 to 2012). The project was part of a course at the University of Michigan School of Information - SI649: Information Visualization. In our scenarios we imagined potential environmentalists or aircraft enthusiast using the data to better understand where bird strikes occur. Our team wanted to map the data into an experience users could play with and really explore the data in a user-friendly manner.",
         "problem": "",
         "description": "It was a sourcing application",
+        "coverImage": {
+            
+            "name": "Wildlife Strikes",
+            "location": "./assets/portfolio/images/wildlifestrikes_1.png",
+            "type": "png"
+            
+        },
+        "images": [
+            
+            {
+                "name": "Wildlife Strikes",
+                "location": "./assets/portfolio/images/wildlifestrikes_1.png",
+                "type": "png"    
+            }
+        ],
         "skills": ["Interaction Design", "Front-End Development"],
         "homePage": true
     },
@@ -25,6 +55,21 @@
         "name": "Connected Cities Design Jam",
         "client": "GE Digital",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",     
+        "coverImage": {
+            
+            "name": "Connected Cities Design Jam",
+            "location": "./assets/portfolio/images/connectedCities_1.png",
+            "type": "png"
+            
+        },
+        "images": [
+            
+            {
+                "name": "Connected Cities Design Jam",
+                "location": "./assets/portfolio/images/connectedCities_1.png",
+                "type": "png"    
+            }
+        ],        
         "overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",
         "problem": "",
         "description": "Design exercise with graduate students",
@@ -36,6 +81,21 @@
         "name": "Cengage - MindTap",
         "client": "Cengage",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",   
+        "coverImage": {
+            
+            "name": "Cengage - MindTap",
+            "location": "./assets/portfolio/images/cengage_1.png",
+            "type": "png"
+            
+        },
+        "images": [
+            
+            {
+                "name": "Cengage - MindTap",
+                "location": "./assets/portfolio/images/cengage_1.png",
+                "type": "png"    
+            }
+        ],        
         "overview": "The Cengage - MindTap project was part of a three month evaluation of the product as part of a graduate course at the University of Michigan School of Information. The course was called SI622 - Needs Assessment and Usability Evaluation. Our team was tasked with examining the MindTap product doing an exhaustive set of research on the project.",
         "problem": "",
         "description": "It was a sourcing application",
@@ -47,6 +107,21 @@
         "name": "Huron River Watershed Council",
         "client": "Huron River Watershed Council",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur quam non risus mattis accumsan. Nulla vulputate consequat sem, imperdiet pulvinar dui tincidunt non. Curabitur purus ligula, venenatis non viverra ac, mattis et nunc.",   
+        "coverImage": {
+            
+            "name": "Huron River Watershed Council",
+            "location": "./assets/portfolio/images/huronriver_1.png",
+            "type": "png"
+            
+        },
+        "images": [
+            
+            {
+                "name": "Huron River Watershed Council",
+                "location": "./assets/portfolio/images/huronriver_1.png",
+                "type": "png"    
+            }
+        ],        
         "overview": "The Cengage - MindTap project was part of a three month evaluation of the product as part of a graduate course at the University of Michigan School of Information. The course was called SI622 - Needs Assessment and Usability Evaluation. Our team was tasked with examining the MindTap product doing an exhaustive set of research on the project.",
         "problem": "",
         "description": "It was a sourcing application",

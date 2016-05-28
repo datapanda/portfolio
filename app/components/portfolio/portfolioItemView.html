@@ -1,16 +1,14 @@
-<div class="row" ng-controller="portfolioItemController">
-    <div class="container">
+<div class="container">
+    <div class="row" ng-controller="portfolioItemController">
         <div class="col-md-4" ng-repeat="item in portfolio">
             <img src="http://placehold.it/350x250">
-            <h1>{{item.name}}</h1>
-            {{item.client}}
-                           {{item.overview}}
-
         </div>
         <div class="col-md-8">
-            <p>
-            </p>
+            <h1>{{item.name}}</h1>
+            <p>{{item.description}}</p>
+            {{item.coverImage.location}}
         </div>
+    </div>
         <div class="row">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo mi, congue a tempus sed, mattis sed libero. Integer dignissim ante at elit sollicitudin, a lacinia sapien congue. Sed laoreet nulla ac sapien aliquam efficitur. Nulla ut erat eu quam ullamcorper iaculis. Proin in ligula lectus. Sed finibus auctor lectus quis feugiat. Aenean sed commodo sapien. Vestibulum id sagittis lectus. Nunc efficitur ex massa, nec fringilla arcu venenatis vitae. Proin eu lectus eu quam tincidunt dictum.
