@@ -74,3 +74,8 @@ p.copyright {
 	min-height: 300px;
 	
 }
+/* Styles go here */
+[class*=' col-'] {
+  text-align:center;
+  border: 1px solid black;
+}

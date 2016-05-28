@@ -1,38 +1,26 @@
-<!--<div class="row" ng-controller="portfolioController">
-    <div class="container">
-        <div class="col-md-4" ng-repeat="item in portfolio">
-            <div class="portfolio-item">
-                <a ui-sref="portfolioItem({ portfolioName: item.name })">
-                    <img src="http://placehold.it/350x250">
-                    <h4>{{item.name}}</h4>
-                </a>
-                <p>
-                    {{item.overview}}
-                </p>                
-            </div>    
-        </div>
-    </div>
-</div>-->
+<!--http://stackoverflow.com/questions/27211799/angular-ng-repeat-add-bootstrap-row-every-3-or-4-cols-->
 
-
-<div ng-repeat="row in rows" ng-controller="portfolioController">
+<!--<div class="container">
     <div class="row">
-        <div class="container">
-            <div ng-class="{'col-xs-4': columns == 3, 'col-xs-3': columns == 4}" ng-repeat="portfolio in row">
-            <!--<div class="col-md-4" ng-repeat="item in portfolio">-->
-                <div class="portfolio-item">
-                    <a ui-sref="portfolioItem({ portfolioName: item.name })">
-                        <img src="http://placehold.it/350x250">
-                        <h4>{{item.name}}</h4>
-                    </a>
-                    <p>
-                        {{item.overview}}
-                    </p>                
-                </div>    
+        <div ng-repeat="item in items">
+            <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                <div class="col-md-4">
+                    <h2>{{item.name}}</h2>
+                </div>
+        </div>
+    </div>    
+</div>-->
+<!--http://stackoverflow.com/questions/27211799/angular-ng-repeat-add-bootstrap-row-every-3-or-4-cols-->
+<div class="container">
+    <div ng-repeat="item in items" ng-if="$index % 3 == 0" class="row">
+        <!--Spit the items from the array into a new row-->
+        <!--<div class="clearfix" ng-if="$index % 3 == 0"></div>-->
+        <div class="col-md-4" ng-repeat="item in items.slice($index, ($index+3 > items.length ? items.length : $index+3))">
+            <div class="portfolio-item">
+                <a ui-sref="portfolioItem({ item: item.name })">{{item.name}}</a>
+                    <img src="http://placehold.it/350x250">
+                    <p>{{item.description}}</p>
             </div>
         </div>
-    </div>
+    </div>    
 </div>
-    <!--<div ng-repeat="row in rows">
-      <div class="row">
-        <div ng-class="{'col-xs-4': columns == 3, 'col-xs-3': columns == 4}" ng-repeat="contest in row">-->

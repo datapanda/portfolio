@@ -88,22 +88,39 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 	//http://andyshora.com/promises-angularjs-explained-as-cartoon.html
 	
     var vm = this;
-    vm.items = [];
+    $scope.items = [];
+	$scope.rowFilter = function(data) {
+		
+		var rows = [];
+		var slices = [3, 2];
+		
+		slices.forEach(function (s) {
+			console.log(s);
+			rows.push(data.splice(0,s));
+		});
+		console.log(rows);
+		return rows;
+  };
+  	
+	
+    // $scope.processArray = $scope.rowFilter($scope.items);
 	
     activate();
 	
     function activate() {
         return getData().then(function() {
+			console.log($scope.items);
             logger.info('Activate the portfolio view');
-			
+			//$scope.processArray = $scope.rowFilter($scope.items);
+
         });
     }
 
     function getData() {
         return portfolioService.getPortfolioData()
             .then(function(data) {
-				vm.items = data;
-				return vm.items;
+				$scope.items = data;
+				return $scope.items;
             });
     }	
 	
@@ -142,3 +159,14 @@ angular.module('portfolioApp', ['ui.router', 'ngResource'])
 	
 	
 })
+
+.filter("col", function() {
+	return function(value) {
+		return ['col-xs-','col-sm-', 'col-md-'].map( function (c) { return c + value} ).join(' ');
+	}
+});
+// .filter("col", function() {
+//   return function(value) {
+//     return ['col-md-'].map( function (c) { return c + value} ).join(' ');
+//   }
+// });
